@@ -1,6 +1,6 @@
 # Snowflake Medallion Data Pipeline
 
-This repository contains my hands-on project building a Medallion Architecture (Bronze, Silver, Gold layers) data warehouse entirely within Snowflake platform. 
+This repository contains my hands-on project building a Medallion Architecture (Bronze, Silver, Gold layers) data warehouse entirely within Snowflake. 
 
 The goal of this project was to practice building ETL pipelines using raw SQL, managing Snowflake internal cloud storage, and transforming raw CSV data into a reporting-ready star schema.
 
@@ -37,3 +37,6 @@ The SQL scripts in this repository are designed to be run in standard Snowflake 
 ## Future Improvements & Learnings
 * **Task Automation:** I have written the SQL logic to automate this pipeline using a Snowflake Task DAG (a root task for Bronze, and a dependent child task for Silver). Due to `EXECUTE TASK` permission restrictions in my current lab environment, I am running the pipeline manually, but scheduling automation is the immediate next step.
 * **Data Quality Checks:** Implement basic data quality checks (like checking for duplicate IDs) before allowing data to pass from Bronze to Silver.
+
+## Acknowledgments
+Thanks to Google's Gemini AI, which acted as my programming assistant throughout this project. Gemini was incredibly helpful for brainstorming the Medallion architecture, drafting and refining the Snowflake SQL scripts, and debugging environment configurations along the way.
