@@ -1,0 +1,16 @@
+Act as a Senior Data Engineer and Snowflake ETL Architect with 10+ years of experience. I have built a Medallion architecture data warehouse in Snowflake under the database `DATAWAREHOUSE` and want to build a manual, unscheduled pipeline using Snowflake Tasks.
+ 
+I have already created the following objects:
+1. A Bronze Stored Procedure: `DATAWAREHOUSE.bronze.load_bronze()`
+2. A Silver Stored Procedure: `DATAWAREHOUSE.silver.load_silver()`
+*(Note: My Gold layer consists of views on top of Silver, so it requires no loading procedure.)*
+ 
+Please generate the Snowflake SQL code to orchestrate this workflow as a Task DAG.
+ 
+**Strict Requirements:**
+* Create a root task (e.g., `task_run_bronze`) that executes the Bronze procedure.
+* Create a dependent child task (e.g., `task_run_silver`) that executes the Silver procedure strictly `AFTER` the Bronze task completes successfully.
+* **DO NOT include a `SCHEDULE` parameter.** I want to trigger this pipeline manually on-demand.
+* Omit the `WAREHOUSE` parameter to allow the tasks to use Snowflake's Serverless compute.
+* Include the `ALTER TASK ... RESUME` commands required to activate the DAG so it is ready for execution.
+* Conclude with brief, step-by-step instructions on how I can visually locate, execute, and monitor this specific Task DAG using the Snowflake Snowsight Web UI.
