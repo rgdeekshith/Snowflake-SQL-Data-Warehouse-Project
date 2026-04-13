@@ -39,4 +39,6 @@ The SQL scripts in this repository are designed to be run in standard Snowflake 
 * **Data Quality Checks:** Implement basic data quality checks (like checking for duplicate IDs) before allowing data to pass from Bronze to Silver.
 
 ## Acknowledgments
-Thanks to Google's Gemini AI, which acted as my programming assistant throughout this project. Gemini was incredibly helpful for brainstorming the Medallion architecture, drafting and refining the Snowflake SQL scripts, and debugging environment configurations along the way.
+Thanks to Google's Gemini AI, which acted as my programming assistant throughout this project as I am a very beginner in Snowflake. Gemini was incredibly helpful for brainstorming the Medallion architecture, drafting and refining the Snowflake SQL scripts, and debugging environment configurations along the way. Please feel free to point out any errors or areas for improvement; I always welcome the opportunity to learn from your feedback and ensure the script is optimized.
+
+**Original repository base:** [sql-data-warehouse-project](https://github.com/rgdeekshith/sql-data-warehouse-project)
